@@ -22,7 +22,7 @@
 
 ## התקנה
 
-1. להוריד את הקובץ: [lesson-opener-by-nofar.zip](https://github.com/nofarg8/lesson-opener-skill/raw/main/lesson-opener-by-nofar.zip)
+1. להוריד את הקובץ: [lesson-opener-by-nofar.zip](https://github.com/nofarg8/skills-openning-hadracha/raw/main/lesson-opener-by-nofar.zip)
 2. בכלי ה-AI שלך, לפתוח את אזור הסקילים ולבחור בהעלאת סקיל.
 3. להעלות את קובץ ה-zip כמו שהוא, בלי לחלץ אותו.
 

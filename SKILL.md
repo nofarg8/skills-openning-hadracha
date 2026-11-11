@@ -17,11 +17,11 @@ description: "Builds a curiosity-sparking lesson opening of 5-7 minutes for any 
 
 | קובץ | מתי לפתוח | קישור |
 | --- | --- | --- |
-| opening-types.md | תמיד | https://raw.githubusercontent.com/nofarg8/lesson-opener-skill/main/references/opening-types.md |
-| age-bands.md | תמיד | https://raw.githubusercontent.com/nofarg8/lesson-opener-skill/main/references/age-bands.md |
-| subjects.md | תמיד | https://raw.githubusercontent.com/nofarg8/lesson-opener-skill/main/references/subjects.md |
-| math.md | כשהשיעור במתמטיקה | https://raw.githubusercontent.com/nofarg8/lesson-opener-skill/main/references/math.md |
-| special-education.md | כשהמורה ציינה לקות, צורך מיוחד או פער שפה | https://raw.githubusercontent.com/nofarg8/lesson-opener-skill/main/references/special-education.md |
+| opening-types.md | תמיד | https://raw.githubusercontent.com/nofarg8/skills-openning-hadracha/main/references/opening-types.md |
+| age-bands.md | תמיד | https://raw.githubusercontent.com/nofarg8/skills-openning-hadracha/main/references/age-bands.md |
+| subjects.md | תמיד | https://raw.githubusercontent.com/nofarg8/skills-openning-hadracha/main/references/subjects.md |
+| math.md | כשהשיעור במתמטיקה | https://raw.githubusercontent.com/nofarg8/skills-openning-hadracha/main/references/math.md |
+| special-education.md | כשהמורה ציינה לקות, צורך מיוחד או פער שפה | https://raw.githubusercontent.com/nofarg8/skills-openning-hadracha/main/references/special-education.md |
 
 סדר הניסיון: קודם הקישור, כי שם הגרסה המעודכנת. אם הקישור לא נפתח, להשתמש בקובץ באותו שם בתיקיית references שצורפה לסקיל. אם גם הוא לא זמין, להמשיך לפי הכללים שבקובץ הזה בלבד. לא להמציא תוכן של קובץ שלא נפתח, ולא להטריד את המורה בקשיי טעינה.
 
