@@ -31,8 +31,11 @@
 
   <!-- מסך 1: מה יקרה עכשיו -->
   <section class="op-screen" data-screen>
-    <p class="op-kicker">מה יקרה עכשיו</p>
     <h2 class="op-question">חידה של שש דקות, בארבעה צעדים</h2>
+    <div class="op-guide">
+      <p class="op-guide-item"><span class="op-guide-label">מה רואים</span>ארבעת הצעדים של החידה.</p>
+      <p class="op-guide-item op-guide-item--do"><span class="op-guide-label">מה עושים</span>מקשיבים. עוד לא כותבים.</p>
+    </div>
     <div class="op-grid">
       <div class="op-card"><span class="op-tag">1</span> שלושה רמזים על המסך</div>
       <div class="op-card"><span class="op-tag op-tag--orange">2</span> כל אחד כותב תשובה במחברת</div>
@@ -43,8 +46,11 @@
 
   <!-- מסך 2: הרמזים -->
   <section class="op-screen is-hidden" data-screen>
-    <p class="op-kicker">הרמזים</p>
     <h2 class="op-question">שתי כוסות זהות, שני כדורים</h2>
+    <div class="op-guide">
+      <p class="op-guide-item"><span class="op-guide-label">מה רואים</span>שתי כוסות, שני כדורים ושלושה רמזים סגורים.</p>
+      <p class="op-guide-item op-guide-item--do"><span class="op-guide-label">מה עושים</span>קוראים כל רמז שנפתח. עוד לא עונים.</p>
+    </div>
     <div class="op-art" aria-hidden="true">
       <svg viewBox="0 0 520 200" width="520" height="200">
         <g>
@@ -79,20 +85,25 @@
 
   <!-- מסך 3: השאלה -->
   <section class="op-screen is-hidden" data-screen>
-    <p class="op-kicker">כותבים במחברת</p>
     <h2 class="op-question">מכניסים כדור לכל כוס. באיזו כוס המים יעלו יותר?</h2>
+    <div class="op-guide">
+      <p class="op-guide-item"><span class="op-guide-label">מה רואים</span>השאלה ושלוש תשובות אפשריות.</p>
+      <p class="op-guide-item op-guide-item--do"><span class="op-guide-label">מה עושים</span>כותבים במחברת אות אחת ומשפט שמסביר אותה. לא מראים לאף אחד.</p>
+    </div>
     <div class="op-options">
       <button class="op-option" data-option><span class="op-option-key">א</span>בכוס של כדור הזכוכית</button>
       <button class="op-option" data-option><span class="op-option-key">ב</span>בכוס של כדור הפלדה</button>
       <button class="op-option" data-option><span class="op-option-key">ג</span>באותה מידה בשתיהן</button>
     </div>
-    <p class="op-note">כותבים אות אחת במחברת, ומשפט אחד שמסביר אותה. לא מראים לאף אחד.</p>
   </section>
 
   <!-- מסך 4: הצבעה חיה -->
   <section class="op-screen is-hidden" data-screen>
-    <p class="op-kicker">מצביעים כולם יחד</p>
     <h2 class="op-question">מה הכיתה חושבת?</h2>
+    <div class="op-guide">
+      <p class="op-guide-item"><span class="op-guide-label">מה רואים</span>כמה תלמידים בחרו בכל תשובה.</p>
+      <p class="op-guide-item op-guide-item--do"><span class="op-guide-label">מה עושים</span>מרימים יד פעם אחת, לתשובה שכתבתם.</p>
+    </div>
     <div class="op-card">
       <div class="op-vote" data-vote>
         <span class="op-vote-label">א. הזכוכית</span>
@@ -122,12 +133,15 @@
         </div>
       </div>
     </div>
-    <p class="op-note">המורה לוחצת + לכל יד מורמת. לא אומרים עכשיו מי צודק.</p>
+    <p class="op-note">למורה: לוחצים + לכל יד מורמת. לא אומרים עכשיו מי צודק.</p>
   </section>
 
   <!-- מסך 5: התשובה הנעולה -->
   <section class="op-screen is-hidden" data-screen>
-    <p class="op-kicker">לסוף השיעור</p>
+    <div class="op-guide">
+      <p class="op-guide-item"><span class="op-guide-label">מה רואים</span>מסך נעול. התשובה מחכה לסוף השיעור.</p>
+      <p class="op-guide-item op-guide-item--do"><span class="op-guide-label">מה עושים</span>שומרים את מה שכתבתם במחברת.</p>
+    </div>
     <div class="op-lock is-locked" id="lock">
       <div class="op-lock-gate">
         <p class="op-lock-title">התשובה נעולה עד סוף השיעור</p>

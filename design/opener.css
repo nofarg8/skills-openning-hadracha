@@ -60,7 +60,7 @@ body.op {
   max-width: 1100px;
   margin: 0 auto;
   flex: 1;
-  padding: 0.7rem 1.6rem 1rem;
+  padding: 0.5rem 1.6rem 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
@@ -225,6 +225,44 @@ body.op {
   margin: 0;
   font-size: 0.8rem;
   color: var(--op-ink-soft);
+}
+
+/* ---------- הנחיות לכיתה: מה רואים ומה עושים, בכל מסך ---------- */
+
+.op-guide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.6rem;
+}
+
+.op-guide-item {
+  margin: 0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 14px;
+  background: var(--op-purple-soft);
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.op-guide-item--do {
+  background: var(--op-orange-soft);
+}
+
+.op-guide-label {
+  display: inline-block;
+  margin-inline-end: 0.5rem;
+  padding: 0 0.7rem;
+  border-radius: 999px;
+  background: var(--op-purple);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.op-guide-item--do .op-guide-label {
+  background: var(--op-orange);
+  color: var(--op-ink);
 }
 
 /* ---------- כרטיסים ורמזים ---------- */
@@ -705,6 +743,10 @@ body.op {
 
   .op-question {
     font-size: 1.35rem;
+  }
+
+  .op-guide {
+    grid-template-columns: 1fr;
   }
 
   .op-logo {
