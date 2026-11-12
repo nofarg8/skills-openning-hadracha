@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>שני כדורים, שתי כוסות | פתיחה דיגיטלית לדוגמה</title>
+<!-- דף דוגמה לקובץ העיצוב opener.css. נופר גרגרוד | פיתוח חשיבה -->
+<link rel="stylesheet" href="opener.css">
+</head>
+<body class="op">
+<header class="op-brand">
+  <a class="op-logo" href="https://www.sciencedu.online/" target="_blank" rel="noopener" aria-label="נופר גרגרוד - פיתוח חשיבה. מעבר לאתר"></a>
+  <div class="op-brand-text">
+    <span class="op-brand-title">הסקיל לפתיחת שיעור מסקרנת</span>
+    <strong class="op-brand-name">פותח על ידי נופר גרגרוד | פיתוח חשיבה</strong>
+  </div>
+  <a class="op-brand-link" href="https://nofarg8.github.io/Link-in-bio-Nofar/" target="_blank" rel="noopener">לעוד כלים והדרכות</a>
+</header>
+<div class="op-app">
+
+  <div class="op-header">
+    <h1 class="op-title">שני כדורים, שתי כוסות</h1>
+    <ol class="op-steps" id="steps" aria-label="התקדמות">
+      <li class="op-step"></li>
+      <li class="op-step"></li>
+      <li class="op-step"></li>
+      <li class="op-step"></li>
+      <li class="op-step"></li>
+    </ol>
+  </div>
+
+  <!-- מסך 1: מה יקרה עכשיו -->
+  <section class="op-screen" data-screen>
+    <p class="op-kicker">מה יקרה עכשיו</p>
+    <h2 class="op-question">חידה של שש דקות, בארבעה צעדים</h2>
+    <div class="op-grid">
+      <div class="op-card"><span class="op-tag">1</span> שלושה רמזים על המסך</div>
+      <div class="op-card"><span class="op-tag op-tag--orange">2</span> כל אחד כותב תשובה במחברת</div>
+      <div class="op-card"><span class="op-tag op-tag--green">3</span> מצביעים כולם יחד</div>
+      <div class="op-card"><span class="op-tag op-tag--pink">4</span> התשובה נשארת נעולה עד סוף השיעור</div>
+    </div>
+  </section>
+
+  <!-- מסך 2: הרמזים -->
+  <section class="op-screen is-hidden" data-screen>
+    <p class="op-kicker">הרמזים</p>
+    <h2 class="op-question">שתי כוסות זהות, שני כדורים</h2>
+    <div class="op-art" aria-hidden="true">
+      <svg viewBox="0 0 520 200" width="520" height="200">
+        <g>
+          <rect x="60" y="70" width="110" height="110" rx="8" fill="none" stroke="var(--op-ink)" stroke-width="5"/>
+          <rect x="63" y="110" width="104" height="67" rx="5" fill="var(--op-purple-soft)"/>
+          <circle cx="115" cy="36" r="22" fill="var(--op-green)" stroke="var(--op-ink)" stroke-width="4"/>
+          <text x="115" y="198" text-anchor="middle" font-size="18" font-weight="700" fill="var(--op-ink)">כוס א'</text>
+        </g>
+        <g>
+          <rect x="350" y="70" width="110" height="110" rx="8" fill="none" stroke="var(--op-ink)" stroke-width="5"/>
+          <rect x="353" y="110" width="104" height="67" rx="5" fill="var(--op-purple-soft)"/>
+          <circle cx="405" cy="36" r="22" fill="var(--op-ink-soft)" stroke="var(--op-ink)" stroke-width="4"/>
+          <text x="405" y="198" text-anchor="middle" font-size="18" font-weight="700" fill="var(--op-ink)">כוס ב'</text>
+        </g>
+      </svg>
+    </div>
+    <div class="op-grid">
+      <button class="op-clue is-closed" data-clue>
+        <span class="op-clue-label">רמז 1</span>
+        <span class="op-clue-body">בשתי הכוסות יש אותה כמות מים בדיוק.</span>
+      </button>
+      <button class="op-clue is-closed" data-clue>
+        <span class="op-clue-label">רמז 2</span>
+        <span class="op-clue-body">שני הכדורים באותו גודל בדיוק. אחד מזכוכית ואחד מפלדה.</span>
+      </button>
+      <button class="op-clue is-closed" data-clue>
+        <span class="op-clue-label">רמז 3</span>
+        <span class="op-clue-body">המסה של כדור הפלדה גדולה בערך פי 3. שני הכדורים שוקעים עד הקרקעית.</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- מסך 3: השאלה -->
+  <section class="op-screen is-hidden" data-screen>
+    <p class="op-kicker">כותבים במחברת</p>
+    <h2 class="op-question">מכניסים כדור לכל כוס. באיזו כוס המים יעלו יותר?</h2>
+    <div class="op-options">
+      <button class="op-option" data-option><span class="op-option-key">א</span>בכוס של כדור הזכוכית</button>
+      <button class="op-option" data-option><span class="op-option-key">ב</span>בכוס של כדור הפלדה</button>
+      <button class="op-option" data-option><span class="op-option-key">ג</span>באותה מידה בשתיהן</button>
+    </div>
+    <p class="op-note">כותבים אות אחת במחברת, ומשפט אחד שמסביר אותה. לא מראים לאף אחד.</p>
+  </section>
+
+  <!-- מסך 4: הצבעה חיה -->
+  <section class="op-screen is-hidden" data-screen>
+    <p class="op-kicker">מצביעים כולם יחד</p>
+    <h2 class="op-question">מה הכיתה חושבת?</h2>
+    <div class="op-card">
+      <div class="op-vote" data-vote>
+        <span class="op-vote-label">א. הזכוכית</span>
+        <div class="op-vote-bar"><div class="op-vote-fill"></div></div>
+        <div class="op-vote-controls">
+          <button class="op-vote-btn" data-minus aria-label="פחות">-</button>
+          <span class="op-vote-count">0</span>
+          <button class="op-vote-btn" data-plus aria-label="עוד">+</button>
+        </div>
+      </div>
+      <div class="op-vote" data-vote>
+        <span class="op-vote-label">ב. הפלדה</span>
+        <div class="op-vote-bar"><div class="op-vote-fill"></div></div>
+        <div class="op-vote-controls">
+          <button class="op-vote-btn" data-minus aria-label="פחות">-</button>
+          <span class="op-vote-count">0</span>
+          <button class="op-vote-btn" data-plus aria-label="עוד">+</button>
+        </div>
+      </div>
+      <div class="op-vote" data-vote>
+        <span class="op-vote-label">ג. אותה מידה</span>
+        <div class="op-vote-bar"><div class="op-vote-fill"></div></div>
+        <div class="op-vote-controls">
+          <button class="op-vote-btn" data-minus aria-label="פחות">-</button>
+          <span class="op-vote-count">0</span>
+          <button class="op-vote-btn" data-plus aria-label="עוד">+</button>
+        </div>
+      </div>
+    </div>
+    <p class="op-note">המורה לוחצת + לכל יד מורמת. לא אומרים עכשיו מי צודק.</p>
+  </section>
+
+  <!-- מסך 5: התשובה הנעולה -->
+  <section class="op-screen is-hidden" data-screen>
+    <p class="op-kicker">לסוף השיעור</p>
+    <div class="op-lock is-locked" id="lock">
+      <div class="op-lock-gate">
+        <p class="op-lock-title">התשובה נעולה עד סוף השיעור</p>
+        <button class="op-btn" id="askUnlock">למורה: פתיחת התשובה</button>
+        <div class="op-confirm is-hidden" id="confirm">
+          <span class="op-text">לפתוח את התשובה עכשיו?</span>
+          <button class="op-btn op-btn--primary" id="yesUnlock">כן, לפתוח</button>
+          <button class="op-btn op-btn--ghost" id="noUnlock">לא עכשיו</button>
+        </div>
+      </div>
+      <div class="op-lock-content">
+        <h2 class="op-question">המים עולים באותה מידה בשתי הכוסות</h2>
+        <p class="op-text">כדור ששוקע דוחק מים לפי המקום שהוא תופס, כלומר לפי הנפח שלו. הנפח של שני הכדורים שווה, ולכן המים עולים באותה מידה. המסה שונה, והיא לא משנה את גובה המים.</p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="op-nav">
+    <button class="op-btn op-btn--ghost" id="prev">הקודם</button>
+    <button class="op-btn op-btn--primary" id="next">הבא</button>
+  </nav>
+
+</div>
+
+<script>
+(function () {
+  var screens = Array.prototype.slice.call(document.querySelectorAll('[data-screen]'));
+  var steps = Array.prototype.slice.call(document.querySelectorAll('#steps .op-step'));
+  var prev = document.getElementById('prev');
+  var next = document.getElementById('next');
+  var current = 0;
+
+  function show(index) {
+    current = Math.max(0, Math.min(screens.length - 1, index));
+    screens.forEach(function (s, i) { s.classList.toggle('is-hidden', i !== current); });
+    steps.forEach(function (s, i) {
+      s.classList.toggle('is-active', i === current);
+      s.classList.toggle('is-done', i < current);
+    });
+    prev.disabled = current === 0;
+    next.disabled = current === screens.length - 1;
+  }
+
+  prev.addEventListener('click', function () { show(current - 1); });
+  next.addEventListener('click', function () { show(current + 1); });
+
+  document.querySelectorAll('[data-clue]').forEach(function (clue) {
+    clue.addEventListener('click', function () { clue.classList.remove('is-closed'); });
+  });
+
+  var options = Array.prototype.slice.call(document.querySelectorAll('[data-option]'));
+  options.forEach(function (option) {
+    option.addEventListener('click', function () {
+      options.forEach(function (o) { o.classList.toggle('is-selected', o === option); });
+    });
+  });
+
+  var votes = Array.prototype.slice.call(document.querySelectorAll('[data-vote]'));
+  var counts = votes.map(function () { return 0; });
+
+  function drawVotes() {
+    var max = Math.max.apply(null, counts.concat([1]));
+    votes.forEach(function (row, i) {
+      row.querySelector('.op-vote-count').textContent = counts[i];
+      row.querySelector('.op-vote-fill').style.width = (counts[i] / max * 100) + '%';
+    });
+  }
+
+  votes.forEach(function (row, i) {
+    row.querySelector('[data-plus]').addEventListener('click', function () { counts[i] += 1; drawVotes(); });
+    row.querySelector('[data-minus]').addEventListener('click', function () { counts[i] = Math.max(0, counts[i] - 1); drawVotes(); });
+  });
+
+  var lock = document.getElementById('lock');
+  var confirmBox = document.getElementById('confirm');
+  document.getElementById('askUnlock').addEventListener('click', function () { confirmBox.classList.remove('is-hidden'); });
+  document.getElementById('noUnlock').addEventListener('click', function () { confirmBox.classList.add('is-hidden'); });
+  document.getElementById('yesUnlock').addEventListener('click', function () { lock.classList.remove('is-locked'); });
+
+  show(0);
+  drawVotes();
+})();
+</script>
+</body>
+</html>

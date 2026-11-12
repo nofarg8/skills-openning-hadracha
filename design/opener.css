@@ -1,0 +1,718 @@
+/*
+  opener.css - עיצוב משותף לפעילויות פתיחה דיגיטליות
+  נופר גרגרוד | פיתוח חשיבה | https://nofarg8.github.io/Link-in-bio-Nofar/
+
+  הקובץ נטען מתוך דף HTML יחיד שנבנה בכלי AI, ומיועד להקרנה בכיתה.
+  כל המחלקות מתחילות ב-op-. מצבים מתחילים ב-is-.
+  אין כאן אנימציות מהירות, הבהובים או צליל.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;800&display=swap");
+
+:root {
+  --op-green: #80ed99;
+  --op-orange: #ffa62b;
+  --op-purple: #7371fc;
+  --op-pink: #f4989c;
+
+  --op-ink: #1f2140;
+  --op-ink-soft: #55587a;
+  --op-bg: #f7f6ff;
+  --op-surface: #ffffff;
+  --op-line: #dcdaf5;
+  --op-purple-soft: #e9e8ff;
+  --op-green-soft: #e3fbe9;
+  --op-orange-soft: #fff0d9;
+  --op-pink-soft: #fde8e9;
+
+  --op-radius: 18px;
+  --op-shadow: 0 4px 18px rgba(31, 33, 64, 0.08);
+  --op-font: "Rubik", "Heebo", "Assistant", "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(17px, 1.55vw, 30px);
+}
+
+body.op {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--op-bg);
+  color: var(--op-ink);
+  font-family: var(--op-font);
+  line-height: 1.5;
+  direction: rtl;
+  text-align: right;
+}
+
+/* ---------- מבנה הדף ---------- */
+
+.op-app {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex: 1;
+  padding: 0.7rem 1.6rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+/* פס המיתוג: תמיד בראש הדף, גדול. הלוגו מוביל לאתר, והכפתור לעוד כלים והדרכות. */
+.op-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.6rem 1.6rem;
+  background: var(--op-ink);
+  color: #ffffff;
+}
+
+/* הלוגו: התמונה מגיעה מקובץ העיצוב עצמו, ולכן אין צורך בתגית img. */
+.op-logo {
+  flex: none;
+  display: block;
+  width: 5.4rem;
+  height: 5.4rem;
+  background: #ffffff url("logo.png") center / contain no-repeat;
+  border: 3px solid #ffffff;
+  border-radius: var(--op-radius);
+}
+
+.op-logo:hover,
+.op-logo:focus-visible {
+  border-color: var(--op-orange);
+  outline: none;
+}
+
+.op-brand-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* הכותרת: שם הסקיל */
+.op-brand-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+/* החתימה: מודגשת ובצבע, מתחת לכותרת */
+.op-brand-name {
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--op-green);
+}
+
+.op-brand-link {
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.8rem;
+  padding: 0.4rem 1.4rem;
+  border-radius: 999px;
+  background: var(--op-orange);
+  color: var(--op-ink);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.op-brand-link:hover,
+.op-brand-link:focus-visible {
+  background: var(--op-green);
+  outline: none;
+}
+
+/* שורת הכותרת של הפעילות */
+.op-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  border-bottom: 4px solid var(--op-purple);
+  padding-bottom: 0.4rem;
+}
+
+.op-title {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.op-sub {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--op-ink-soft);
+}
+
+/* ---------- מסכים ---------- */
+
+.op-screen {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.op-steps {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.op-step {
+  width: 2.2rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--op-line);
+}
+
+.op-step.is-done {
+  background: var(--op-green);
+}
+
+.op-step.is-active {
+  background: var(--op-purple);
+}
+
+.op-kicker {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0.15rem 0.8rem;
+  border-radius: 999px;
+  background: var(--op-purple-soft);
+  color: var(--op-ink);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.op-question {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.op-text {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.op-note {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--op-ink-soft);
+}
+
+/* ---------- כרטיסים ורמזים ---------- */
+
+.op-card {
+  background: var(--op-surface);
+  border: 2px solid var(--op-line);
+  border-radius: var(--op-radius);
+  box-shadow: var(--op-shadow);
+  padding: 1rem 1.2rem;
+}
+
+.op-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.9rem;
+}
+
+.op-clue {
+  position: relative;
+  min-height: 5rem;
+  background: var(--op-surface);
+  border: 3px solid var(--op-purple);
+  border-radius: var(--op-radius);
+  box-shadow: var(--op-shadow);
+  padding: 1rem 1.2rem;
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--op-ink);
+  text-align: right;
+  cursor: default;
+}
+
+.op-clue-label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--op-purple);
+}
+
+.op-clue.is-closed {
+  background: var(--op-purple);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.op-clue.is-closed .op-clue-label {
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.op-clue.is-closed .op-clue-body {
+  display: none;
+}
+
+/* ---------- כפתורים ---------- */
+
+.op-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.8rem;
+  padding: 0.5rem 1.4rem;
+  border: 3px solid var(--op-ink);
+  border-radius: 999px;
+  background: var(--op-surface);
+  color: var(--op-ink);
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.op-btn:hover {
+  background: var(--op-purple-soft);
+}
+
+.op-btn:focus-visible,
+.op-clue:focus-visible,
+.op-option:focus-visible,
+.op-item:focus-visible {
+  outline: 4px solid var(--op-orange);
+  outline-offset: 3px;
+}
+
+.op-btn--primary {
+  background: var(--op-orange);
+}
+
+.op-btn--primary:hover {
+  background: #ffb84f;
+}
+
+.op-btn--ghost {
+  border-color: var(--op-line);
+  color: var(--op-ink-soft);
+}
+
+.op-btn--small {
+  min-height: 2rem;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.op-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.op-nav {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0.6rem;
+}
+
+/* ---------- בחירה והתחייבות ---------- */
+
+.op-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.9rem;
+}
+
+.op-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 6rem;
+  padding: 0.8rem 1rem;
+  background: var(--op-surface);
+  border: 3px solid var(--op-line);
+  border-radius: var(--op-radius);
+  font-family: inherit;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--op-ink);
+  text-align: center;
+  cursor: pointer;
+}
+
+.op-option.is-selected {
+  border-color: var(--op-purple);
+  background: var(--op-purple-soft);
+}
+
+.op-option-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: var(--op-purple);
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+/* ---------- הצבעה חיה ---------- */
+
+.op-vote {
+  display: grid;
+  grid-template-columns: minmax(8rem, 16rem) 1fr auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 0;
+}
+
+.op-vote-label {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.op-vote-bar {
+  height: 2.2rem;
+  background: var(--op-surface);
+  border: 2px solid var(--op-line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.op-vote-fill {
+  height: 100%;
+  width: 0;
+  background: var(--op-purple);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.op-vote:nth-of-type(4n + 2) .op-vote-fill {
+  background: var(--op-orange);
+}
+
+.op-vote:nth-of-type(4n + 3) .op-vote-fill {
+  background: var(--op-green);
+}
+
+.op-vote:nth-of-type(4n + 4) .op-vote-fill {
+  background: var(--op-pink);
+}
+
+.op-vote-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.op-vote-count {
+  min-width: 2.4rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.op-vote-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 3px solid var(--op-ink);
+  border-radius: 50%;
+  background: var(--op-surface);
+  color: var(--op-ink);
+  font-family: inherit;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.op-vote-btn:hover {
+  background: var(--op-purple-soft);
+}
+
+/* ---------- מיון וגרירה ---------- */
+
+.op-sort {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.op-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  min-height: 3.6rem;
+  padding: 0.6rem;
+  border: 2px dashed var(--op-line);
+  border-radius: var(--op-radius);
+}
+
+.op-item {
+  padding: 0.45rem 1rem;
+  background: var(--op-surface);
+  border: 3px solid var(--op-ink);
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--op-ink);
+  cursor: grab;
+  user-select: none;
+}
+
+.op-item.is-selected {
+  background: var(--op-orange-soft);
+  border-color: var(--op-orange);
+}
+
+.op-zones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 0.9rem;
+}
+
+.op-zone {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 0.6rem;
+  min-height: 9rem;
+  padding: 0.8rem;
+  background: var(--op-surface);
+  border: 3px solid var(--op-line);
+  border-radius: var(--op-radius);
+}
+
+.op-zone.is-over {
+  border-color: var(--op-purple);
+  background: var(--op-purple-soft);
+}
+
+.op-zone-title {
+  flex-basis: 100%;
+  margin: 0 0 0.2rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+/* ---------- מספר שמגיב ---------- */
+
+.op-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.op-slider {
+  width: 100%;
+  height: 2rem;
+  accent-color: var(--op-purple);
+  cursor: pointer;
+}
+
+.op-value {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--op-purple);
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+.op-value-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--op-ink-soft);
+}
+
+.op-stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.9rem;
+}
+
+.op-stat {
+  background: var(--op-surface);
+  border: 2px solid var(--op-line);
+  border-radius: var(--op-radius);
+  padding: 0.8rem 1rem;
+  text-align: center;
+}
+
+/* ---------- ציור פשוט ---------- */
+
+.op-art {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2rem;
+  padding: 0.2rem;
+}
+
+.op-art svg {
+  max-width: 100%;
+  height: auto;
+  max-height: 20vh;
+}
+
+/* ---------- התשובה הנעולה ---------- */
+
+.op-lock {
+  background: var(--op-surface);
+  border: 3px solid var(--op-green);
+  border-radius: var(--op-radius);
+  padding: 1.2rem 1.4rem;
+}
+
+.op-lock.is-locked {
+  border-style: dashed;
+  border-color: var(--op-ink-soft);
+  background: var(--op-bg);
+  text-align: center;
+}
+
+.op-lock.is-locked .op-lock-content {
+  display: none;
+}
+
+.op-lock:not(.is-locked) .op-lock-gate {
+  display: none;
+}
+
+.op-lock-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.op-lock-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.op-confirm {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---------- תגיות צבע ---------- */
+
+.op-tag {
+  display: inline-block;
+  padding: 0.1rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  background: var(--op-purple-soft);
+}
+
+.op-tag--green {
+  background: var(--op-green-soft);
+}
+
+.op-tag--orange {
+  background: var(--op-orange-soft);
+}
+
+.op-tag--pink {
+  background: var(--op-pink-soft);
+}
+
+/* ---------- קרדיט בתחתית (לא בשימוש בתבנית הנוכחית, נשאר לתאימות) ---------- */
+
+.op-footer {
+  padding: 0.35rem 1rem;
+  background: var(--op-ink);
+  color: #ffffff;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.op-footer a {
+  color: var(--op-green);
+}
+
+/* ---------- מסכים צרים ---------- */
+
+@media (max-width: 640px) {
+  .op-vote {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .op-question {
+    font-size: 1.35rem;
+  }
+
+  .op-logo {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .op-brand {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .op-brand-title {
+    font-size: 1.25rem;
+  }
+
+  .op-brand-name {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
