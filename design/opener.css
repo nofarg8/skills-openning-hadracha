@@ -166,7 +166,7 @@ body.op {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.7rem;
+  gap: 0.55rem;
 }
 
 .is-hidden {
@@ -540,21 +540,24 @@ body.op {
 
 /* ---------- מספר שמגיב ---------- */
 
+/* המחוון והמספר שלידו באותה שורה, כדי לחסוך גובה בהקרנה */
 .op-control {
   display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 1rem;
 }
 
 .op-slider {
-  width: 100%;
+  flex: 1 1 12rem;
+  min-width: 0;
   height: 2rem;
   accent-color: var(--op-purple);
   cursor: pointer;
 }
 
 .op-value {
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-weight: 800;
   line-height: 1.1;
   color: var(--op-purple);
@@ -575,11 +578,24 @@ body.op {
 }
 
 .op-stat {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.6rem;
   background: var(--op-surface);
   border: 2px solid var(--op-line);
   border-radius: var(--op-radius);
-  padding: 0.8rem 1rem;
+  padding: 0.15rem 1rem;
   text-align: center;
+}
+
+.op-stat .op-value {
+  font-size: 1.8rem;
+}
+
+/* כפתור שעומד לבד במסך לא נמתח לכל הרוחב */
+.op-screen > .op-btn {
+  align-self: flex-start;
 }
 
 /* ---------- ציור פשוט ---------- */
@@ -595,7 +611,7 @@ body.op {
 .op-art svg {
   max-width: 100%;
   height: auto;
-  max-height: 20vh;
+  max-height: 16vh;
 }
 
 /* ---------- התשובה הנעולה ---------- */
